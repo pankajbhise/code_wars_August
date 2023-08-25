@@ -1,0 +1,18 @@
+# Question2).
+N = 4
+arr = [0,3,1,2,2,3]
+# print("Enter elements in the array:")
+# for i in range(0,N):
+#     temp = int(input())
+#     arr.append(temp)
+
+arr_size = len(arr)
+for i in range(arr_size):
+  
+    x = arr[i] % arr_size
+    arr[x] = arr[x] + arr_size
+  
+print("The repeating elements are : ")
+for i in range(arr_size):
+    if (arr[i] >= arr_size*2):
+        print(i, " ")
